@@ -1,6 +1,6 @@
 # README #
 
-Turkcell-Saha System
+Turkcell Ecommerce
 
 ## Micro Services And Ports
 #### Cloud  Micro Services
@@ -13,11 +13,7 @@ Turkcell-Saha System
 * microservices-dashboard  8001 N/A
 
 #### Logical Micro Services
-* user-service 8085
-* definition-service 8086
-* back-office-service 8087 N/A
-* notification-service 8088 N/A
-* uaa-service 9999
+* List of logical microservices
 
 #### Monitoring
 * circuit-breaker 8769
@@ -26,17 +22,12 @@ Turkcell-Saha System
 * Spring Cloud, Spring, Java8, Shell script
 * Redis, RabbitMq
 * Oracle, Hibernate
-* Android, iOS
-* Angular2, Css3, Html5
-* Cassandra,Spark
-
+* List of technologies used
 
 #### Before you start
 - Install Docker and Docker Compose.
-- Export environment variables: `-Dspring.profiles.active`,`CONFIG_SERVER_URL`,`CONFIG_SERVER_PASSWORD`, `NOTIFICATION_SERVICE_PASSWORD`, `STATISTICS_SERVICE_PASSWORD`, `ACCOUNT_SERVICE_PASSWORD`, `MONGODB_PASSWORD` (make sure they were exported: `printenv`)
+- Export environment variables: `-Dspring.profiles.active`,`CONFIG_SERVER_URL`,`CONFIG_SERVER_PASSWORD` (make sure they were exported: `printenv`)
 - JDBC GENERAL `JDBC_URL`,`JDBC_USER`,`JDBC_PASS`
-- JDBC USER SERVICE `JDBC_USER_URL`,`JDBC_USER_USER`,`JDBC_USER_PASS`
-- JDBC UAA SERVICE `JDBC_UAA_URL`,`JDBC_UAA_USER`,`JDBC_UAA_PASS`
 
 ### How do I get set up? ###
 
