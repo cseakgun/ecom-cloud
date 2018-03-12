@@ -17,7 +17,7 @@ public class AuditingEntityListener {
 	@PrePersist
 	@PreUpdate
 	public void setLastModifiedDate(BaseEntity entity) {
-		if (entity.getId() == null) {
+		if (entity.getIdentifier() == null) {
 			entity.setCreatedDate(ZonedDateTime.now());
 		}
 		entity.setLastModifiedDate(ZonedDateTime.now());

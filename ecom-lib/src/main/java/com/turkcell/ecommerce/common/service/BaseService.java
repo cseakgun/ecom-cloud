@@ -29,7 +29,7 @@ public abstract class BaseService<Entity extends BaseEntity, ID extends Serializ
 	}
 	
 	public Optional<Entity> put(ID id, Entity entity) {
-		entity.setId((Long) id);
+		entity.setIdentifier((Long) id);
 		return save(entity);
 	}
 

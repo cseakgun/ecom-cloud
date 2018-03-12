@@ -34,7 +34,7 @@ public abstract class BaseEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "id")
-	protected Long id;
+	protected Long identifier;
 	@CreatedDate
 	@Column(name = "created_date", nullable = false)
 	protected ZonedDateTime createdDate = ZonedDateTime.now();
@@ -49,12 +49,12 @@ public abstract class BaseEntity implements Serializable {
 	@Column(name = "last_modified_by")
 	private String lastModifiedBy;
 
-	public Long getId() {
-		return this.id;
+	public Long getIdentifier() {
+		return this.identifier;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdentifier(Long identifier) {
+		this.identifier = identifier;
 	}
 
 	public ZonedDateTime getCreatedDate() {
@@ -74,7 +74,7 @@ public abstract class BaseEntity implements Serializable {
 	}
 
 	public int hashCode() {
-		return Objects.hash(new Object[] { this.id });
+		return Objects.hash(new Object[] { this.identifier });
 	}
 
 	public boolean equals(Object obj) {
@@ -84,7 +84,7 @@ public abstract class BaseEntity implements Serializable {
 		if (obj == null) {
 			return false;
 		}
-		return (getClass() == obj.getClass()) && (Objects.equals(this.id, ((BaseEntity) obj).id));
+		return (getClass() == obj.getClass()) && (Objects.equals(this.identifier, ((BaseEntity) obj).identifier));
 	}
 
 	public String toString() {
@@ -92,7 +92,7 @@ public abstract class BaseEntity implements Serializable {
 	}
 
 	protected ToStringCreator toString(ToStringCreator creator) {
-		return creator.append("id", getId());
+		return creator.append("id", getIdentifier());
 	}
 
 	public String getCreatedBy() {
