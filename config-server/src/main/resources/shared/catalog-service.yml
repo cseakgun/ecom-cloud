@@ -1,0 +1,23 @@
+info:
+  component: Catalog Service
+
+server:
+  port: ${PORT:9010}
+  use-forward-headers: false
+
+logging:
+  file: ${user.home}/Downloads/log/catalog-service.log
+
+---
+spring:
+  profiles: test
+
+logging:
+  file: ${user.home}/ecom-logs/catalog-service.log
+
+---
+spring:
+  profiles: cloud
+
+logging:
+  file: ${user.home}/ecom-logs/catalog-service.log

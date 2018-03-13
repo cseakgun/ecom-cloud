@@ -21,9 +21,10 @@
 	<modules>
 		<module>client-lib</module>
 		<module>ecom-lib</module>
-		<module>discovery-server</module>
 		<module>config-server</module>
-		<module>review-service</module>
+		<module>discovery-server</module>
+		<module>api-gateway</module>
+		<module>catalog-service</module>
 	</modules>
 
 	<properties>
@@ -31,7 +32,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Finchley.M8</spring-cloud.version>
-		<mapstruct.version>1.1.0.Final</mapstruct.version>
+		<mapstruct.version>1.2.0.Final</mapstruct.version>
 		<maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
 
 		<swagger.version>2.7.0</swagger.version>
@@ -40,8 +41,9 @@
 		<com.google.guava.version>19.0</com.google.guava.version>
 		
 		<docker.image.prefix>ecommerce</docker.image.prefix>
+		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
 	</properties>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>

@@ -1,0 +1,11 @@
+spring:
+  application:
+      name: catalog-service
+  config:
+      name: catalog-service
+  cloud:
+      config:
+        uri: ${CONFIG_SERVER_URL:http://localhost:8888}
+        password: ${CONFIG_SERVER_PASSWORD:12345}
+        username: user
+#        fail-fast: true

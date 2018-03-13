@@ -32,7 +32,7 @@ eureka:
 #      leaseExpirationDurationInSeconds: 2
 #      prefer-ip-address: true
       hostname: ${APPLICATION_DOMAIN:${spring.application.name}}
-      nonSecurePort: 80
+      #nonSecurePort: 80
       status-page-url-path: /actuator/info
       health-check-url-path: /actuator/health
       

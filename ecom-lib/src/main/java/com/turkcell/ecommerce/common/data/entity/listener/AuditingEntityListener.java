@@ -7,7 +7,7 @@ import javax.persistence.PreUpdate;
 
 import org.springframework.stereotype.Component;
 
-import com.turkcell.ecommerce.common.data.entity.BaseEntity;
+import com.turkcell.ecommerce.common.data.entity.AbstractEntity;
 
 /**
  * @author Selahaddin Akgun
@@ -16,7 +16,7 @@ import com.turkcell.ecommerce.common.data.entity.BaseEntity;
 public class AuditingEntityListener {
 	@PrePersist
 	@PreUpdate
-	public void setLastModifiedDate(BaseEntity entity) {
+	public void setLastModifiedDate(AbstractEntity entity) {
 		if (entity.getIdentifier() == null) {
 			entity.setCreatedDate(ZonedDateTime.now());
 		}

@@ -1,6 +1,5 @@
 package com.turkcell.ecommerce.common.controller;
 
-import java.io.Serializable;
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -16,16 +15,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.turkcell.ecommerce.client.dto.AbstractDto;
 import com.turkcell.ecommerce.client.resource.AbstractResource;
-import com.turkcell.ecommerce.common.data.entity.BaseEntity;
+import com.turkcell.ecommerce.common.data.entity.AbstractEntity;
+import com.turkcell.ecommerce.common.service.BaseService;
 
 /**
  * @author Selahaddin Akgun
  */
 @Component
-public abstract class BaseEntityController<DTO extends AbstractDto, Entity extends BaseEntity, Resource extends AbstractResource, ID extends Serializable>
-		extends BaseGetEntityController<DTO, Entity, Resource, ID> {
+public abstract class BaseEntityController<DTO extends AbstractDto, Entity extends AbstractEntity, Resource extends AbstractResource, Service extends BaseService<Entity>>
+		extends BaseGetEntityController<DTO, Entity, Resource, Service> {
+
 	@DeleteMapping({ "/{id}" })
-	public void delete(@PathVariable("id") ID id) {
+	public void delete(@PathVariable("id") Long id) {
 		getService().delete(id);
 	}
 
@@ -38,7 +39,7 @@ public abstract class BaseEntityController<DTO extends AbstractDto, Entity exten
 	}
 
 	@PutMapping({ "/{id}" })
-	public ResponseEntity<Resource> put(@PathVariable("id") ID id, @RequestBody @Valid DTO dto) {
+	public ResponseEntity<Resource> put(@PathVariable("id") Long id, @RequestBody @Valid DTO dto) {
 		Entity forSave = getMapper().toEntity(dto);
 		Optional<Entity> put = getService().put(id, forSave);
 		Resource resource = getMapper().toResource(put.get());
