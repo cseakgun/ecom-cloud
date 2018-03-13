@@ -1,6 +1,6 @@
-package com.turkcell.ecommerce.lib.resource.review;
+package com.turkcell.ecommerce.client.resource.catalog.review;
 
-import com.turkcell.ecommerce.common.resource.resource.AbstractResource;
+import com.turkcell.ecommerce.client.resource.AbstractResource;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

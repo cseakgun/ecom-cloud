@@ -1,4 +1,4 @@
-package com.turkcell.ecommerce.common.resource.resource;
+package com.turkcell.ecommerce.client.resource;
 
 import java.io.Serializable;
 

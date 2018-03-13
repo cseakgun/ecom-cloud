@@ -1,8 +1,8 @@
-package com.turkcell.ecommerce.lib.dto.review;
+package com.turkcell.ecommerce.client.dto.catalog.review;
 
 import java.util.Map;
 
-import com.turkcell.ecommerce.common.resource.dto.AbstractDto;
+import com.turkcell.ecommerce.client.dto.AbstractDto;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

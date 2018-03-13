@@ -1,4 +1,4 @@
-package com.turkcell.ecommerce.common.resource.dto;
+package com.turkcell.ecommerce.client.dto;
 
 import java.io.Serializable;
 

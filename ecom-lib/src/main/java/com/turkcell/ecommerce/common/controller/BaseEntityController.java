@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.turkcell.ecommerce.client.dto.AbstractDto;
+import com.turkcell.ecommerce.client.resource.AbstractResource;
 import com.turkcell.ecommerce.common.data.entity.BaseEntity;
-import com.turkcell.ecommerce.common.resource.dto.AbstractDto;
-import com.turkcell.ecommerce.common.resource.resource.AbstractResource;
 
 /**
  * @author Selahaddin Akgun

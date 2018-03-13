@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.turkcell.ecommerce.lib.dto.review.ReviewDto;
-import com.turkcell.ecommerce.lib.resource.review.ReviewResource;
+import com.turkcell.ecommerce.client.dto.catalog.review.ReviewDto;
+import com.turkcell.ecommerce.client.resource.catalog.review.ReviewResource;
 
 /**
  * @author Selahaddin Akgun

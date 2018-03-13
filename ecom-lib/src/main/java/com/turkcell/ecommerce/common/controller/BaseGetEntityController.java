@@ -16,10 +16,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.turkcell.ecommerce.client.dto.AbstractDto;
+import com.turkcell.ecommerce.client.resource.AbstractResource;
 import com.turkcell.ecommerce.common.data.entity.BaseEntity;
 import com.turkcell.ecommerce.common.mapper.Mapper;
-import com.turkcell.ecommerce.common.resource.dto.AbstractDto;
-import com.turkcell.ecommerce.common.resource.resource.AbstractResource;
 import com.turkcell.ecommerce.common.service.BaseService;
 
 /**
