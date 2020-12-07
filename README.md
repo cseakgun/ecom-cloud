@@ -1,6 +1,6 @@
 # README #
 
-Turkcell Ecommerce
+Ecommerce
 
 ## Micro Services And Ports
 #### Cloud  Micro Services
